@@ -1,0 +1,16 @@
+<main class="pets-page">
+  <h1>🐾 Your Pets 🐾</h1>
+
+  <div class="add-pet-btn">
+    <a href="/pets/new">➕ Add New Pet</a>
+  </div>
+
+  <ul class="pet-list">
+    <% pets.forEach(pet => { %>
+      <li>
+        🐱 <a href="/pets/<%= pet._id %>"><%= pet.name %></a> 
+        <span class="breed">(<%= pet.breed %>)</span>
+      </li>
+    <% }) %>
+  </ul>
+</main>

@@ -1,0 +1,19 @@
+<h1><%= pet.name %> (<%= pet.breed %>)</h1>
+
+<% if (pet.image) { %>
+  <img src="<%= pet.image %>" alt="Image of <%= pet.name %>" style="max-width:300px;">
+<% } %>
+
+<p><strong>Age:</strong> <%= pet.age || 'N/A' %></p>
+<p><strong>Care Instructions:</strong> <%= pet.careInstructions || 'N/A' %></p>
+<p><strong>Feeding Schedule:</strong> <%= pet.feedingSchedule || 'N/A' %></p>
+<p><strong>Medical Needs:</strong> <%= pet.medicalNeeds || 'N/A' %></p>
+
+<% if (pet.user && currentUser && pet.user.toString() === currentUser.toString()) { %>
+  <a href="/pets/<%= pet._id %>/edit">Edit</a>
+  <form action="/pets/<%= pet._id %>?_method=DELETE" method="POST" style="display:inline">
+    <button type="submit">Delete</button>
+  </form>
+<% } %>
+
+<a href="/pets">Back to All Pets</a>

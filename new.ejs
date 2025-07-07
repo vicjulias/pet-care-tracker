@@ -1,0 +1,16 @@
+<h1>Add a New Pet</h1>
+<form action="/pets" method="POST">
+  <label>Name: <input type="text" name="name" required></label><br>
+  <label>Breed: <input type="text" name="breed" required></label><br>
+  <label>Age: <input type="number" name="age"></label><br>
+  <label>Care Instructions:<br>
+    <textarea name="careInstructions"></textarea>
+  </label><br>
+  <label>Feeding Schedule: <input type="text" name="feedingSchedule"></label><br>
+  <label>Medical Needs:<br>
+    <textarea name="medicalNeeds"></textarea>
+  </label><br>
+  <label>Image URL: <input type="text" name="image"></label><br>
+  <button type="submit">Create</button>
+</form>
+<a href="/pets">Back to All Pets</a>

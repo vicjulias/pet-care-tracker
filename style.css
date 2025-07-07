@@ -1,0 +1,172 @@
+/* Reset basics */
+body, h1, h2, p, ul, li, a, form, input, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f0f5f7;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: #2e8b94; /* calm teal */
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a,
+nav form button {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav a:hover,
+nav form button:hover {
+  text-decoration: underline;
+}
+
+/* Main card layout */
+main {
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex-grow: 1;
+}
+
+/* Pet list */
+ul {
+  list-style-type: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+li {
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+}
+
+li a {
+  color: #2e8b94;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+a.button,
+button {
+  background-color: #2e8b94;
+  color: white;
+  padding: 10px 18px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+a.button:hover,
+button:hover {
+  background-color: #246f75;
+}
+
+/* Forms */
+.form-container {
+  max-width: 400px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #444;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #2e8b94;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main {
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .form-container {
+    margin: 40px 10px;
+    padding: 25px 20px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  nav a,
+  nav form button {
+    font-size: 14px;
+  }
+}

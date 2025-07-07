@@ -1,0 +1,16 @@
+<h1>Edit <%= pet.name %></h1>
+<form action="/pets/<%= pet._id %>?_method=PUT" method="POST">
+  <label>Name: <input type="text" name="name" value="<%= pet.name %>" required></label><br>
+  <label>Breed: <input type="text" name="breed" value="<%= pet.breed %>" required></label><br>
+  <label>Age: <input type="number" name="age" value="<%= pet.age %>"></label><br>
+  <label>Care Instructions:<br>
+    <textarea name="careInstructions"><%= pet.careInstructions %></textarea>
+  </label><br>
+  <label>Feeding Schedule: <input type="text" name="feedingSchedule" value="<%= pet.feedingSchedule %>"></label><br>
+  <label>Medical Needs:<br>
+    <textarea name="medicalNeeds"><%= pet.medicalNeeds %></textarea>
+  </label><br>
+  <label>Image URL: <input type="text" name="image" value="<%= pet.image %>"></label><br>
+  <button type="submit">Update</button>
+</form>
+<a href="/pets/<%= pet._id %>">Cancel</a>
